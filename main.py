@@ -27,9 +27,12 @@ def find_mismatch(text):
             opening_brackets_stack.pop()
             pass
         
-            if opening_brackets_stack:
-                return opening_brackets_stack[-1].position
-            return "Succes"
+            if not opening_brackets_stack:
+                print("Success")
+            else:
+                opening_brackets_stack[0].position+1
+                #return opening_brackets_stack[-1].position
+            #return "Succes"
 
 
 def main():
